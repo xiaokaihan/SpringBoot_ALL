@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #CentOS下的Redis 分布式集群搭建（单机版）
+=======
+# CentOS下的Redis 分布式集群搭建（单机版）
+>>>>>>> bc19dde2710f2f17b916056c95753a356cb27bf5
 
 * [搭建Redis集群](#搭建redis集群)
       * [搭建环境](#搭建环境)
@@ -32,8 +36,12 @@
       * [注意问题总结](#注意问题总结)
       * [<strong>集群的另一种创建方式</strong>](#集群的另一种创建方式)
       * [SpringBoot连接Redis集群](#springboot连接redis集群)
+<<<<<<< HEAD
 
 
+=======
+      
+>>>>>>> bc19dde2710f2f17b916056c95753a356cb27bf5
 
 ## 搭建Redis集群
 

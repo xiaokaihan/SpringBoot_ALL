@@ -1,15 +1,18 @@
 # CentOS下的Redis 分布式集群搭建（单机版）
 
-* [CentOS下的Redis 分布式集群搭建（单机版）](#centos下的redis-分布式集群搭建单机版)
+Table of Contents
+=================
+
+   * [CentOS下的Redis 分布式集群搭建（单机版）](#centos下的redis-分布式集群搭建单机版)
       * [搭建Redis集群](#搭建redis集群)
       * [搭建环境](#搭建环境)
          * [Centos 7.5 64  腾讯云公共镜像](#centos-75-64--腾讯云公共镜像)
       * [安装 redis 5.0.0](#安装-redis-500)
-         * [<strong>1、安装编译相关软件包</strong>](#1安装编译相关软件包)
-         * [<strong>2、下载redis并解压</strong>](#2下载redis并解压)
-         * [<strong>3、安装redis</strong>](#3安装redis)
-         * [<strong>4、创建集群目录</strong>](#4创建集群目录)
-         * [<strong>5、复制和修改配置文件</strong>](#5复制和修改配置文件)
+         * [1、安装编译相关软件包](#1安装编译相关软件包)
+         * [2、下载redis并解压](#2下载redis并解压)
+         * [3、安装redis](#3安装redis)
+         * [4、创建集群目录](#4创建集群目录)
+         * [5、复制和修改配置文件](#5复制和修改配置文件)
          * [6、redis集群密码设置](#6redis集群密码设置)
          * [7、配置补充](#7配置补充)
       * [启动Redis](#启动redis)
@@ -31,7 +34,7 @@
          * [基准测试](#基准测试)
          * [流水线测试](#流水线测试)
       * [注意问题总结](#注意问题总结)
-      * [<strong>集群的另一种创建方式</strong>](#集群的另一种创建方式)
+      * [集群的另一种创建方式](#集群的另一种创建方式)
       * [SpringBoot连接Redis集群](#springboot连接redis集群)
 
 
@@ -66,20 +69,20 @@
 
 ## 安装 redis 5.0.0
 
-### **1、安装编译相关软件包**
+### 1、安装编译相关软件包
 
 ```shell
 yum -y install make gcc gcc-c++ wget
 ```
 
-### **2、下载redis并解压**
+### 2、下载redis并解压
 
 ```shell
 wget http://download.redis.io/releases/redis-5.0.0.tar.gz
 tar zxvf redis-5.0.0.tar.gz
 ```
 
-### **3、安装redis**
+### 3、安装redis
 
 ```shell
 cd redis-5.0.0/
@@ -107,14 +110,14 @@ cp redis-server /usr/bin/
 
 以上为常用命令，根据需要而定
 
-### **4、创建集群目录**
+### 4、创建集群目录
 
 ```shell
 cd /usr/local/redis
 mkdir cluster
 ```
 
-### **5、复制和修改配置文件**
+### 5、复制和修改配置文件
 
 **（把解压后的redis-5.0.0文件夹中的配置文件拷贝一份到cluster目录下）**
 
@@ -1257,7 +1260,7 @@ GET: 535905.69 requests per second
 
    再重新启动
 
-## **集群的另一种创建方式**
+## 集群的另一种创建方式
 
 创建集群的方式`create_cluster.sh`
 
